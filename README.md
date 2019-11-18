@@ -51,7 +51,7 @@ library(tidyr)
 data<-read.table("test_name.txt",header = FALSE,stringsAsFactors = FALSE)
 colnames(data)<-"gene"
 
-## you can get all input characters you can from input "getinputs" as the first parameter
+## you can get all input characters you can by inputting "getinputs" as the first parameter
 bitr_db2db("getinputs")
 # [1] "Affy GeneChip Array"          "Affy ID"                      "Affy Transcript Cluster ID"  
 # [4] "Agilent ID"                   "Biocarta Pathway Name"        "CodeLink ID"                 
@@ -59,7 +59,7 @@ bitr_db2db("getinputs")
 #[10] "EC Number"                    "Ensembl Gene ID"              "Ensembl Protein ID"
 # ........
 
-## you can get all output characters you can got from input "getoutputsforinput" as the first parameter。
+## you can get all output characters you can got by inputting "getoutputsforinput" as the first parameter。
 bitr_db2db("getoutputsforinput","Ensembl Transcript ID")
 
 #  [1] "Affy ID"                        "Agilent ID"                     "Allergome Code"                
@@ -68,7 +68,7 @@ bitr_db2db("getoutputsforinput","Ensembl Transcript ID")
 # [10] "CodeLink ID"                    "COSMIC ID"                      "CPDB Protein Interactor"  
 # ....
 
-##to get ensmebl trans 2 symbol,you can input the follow cmd.
+##to get ensmebl trans 2 symbol,you can input the following cmd.
 haha<-bitr_db2db("","Ensembl Transcript ID",data$gene,"Gene Symbol")
 #[1] "your id have 1:1 mapping!"
 head(haha)
